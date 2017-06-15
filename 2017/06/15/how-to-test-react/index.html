@@ -93,12 +93,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Devillo Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="随着越来越多的人使用 React 开发web应用，如何高效全面的测试 React 组件成了一个问题。今天我们主要讲解如何使用 Jest、Enzyme 编写 React 组件单元测试。 安装 使用npm npm install --save-dev jest babel-jest enzyme react-test-renderer  使用yarn yarn add -D jest babel-je">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何编写 React 组件测试">
+<meta property="og:url" content="http://yoursite.com/2017/06/15/how-to-test-react/index.html">
 <meta property="og:site_name" content="Devillo Blog">
+<meta property="og:description" content="随着越来越多的人使用 React 开发web应用，如何高效全面的测试 React 组件成了一个问题。今天我们主要讲解如何使用 Jest、Enzyme 编写 React 组件单元测试。 安装 使用npm npm install --save-dev jest babel-jest enzyme react-test-renderer  使用yarn yarn add -D jest babel-je">
+<meta property="og:updated_time" content="2017-06-15T09:31:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Devillo Blog">
+<meta name="twitter:title" content="如何编写 React 组件测试">
+<meta name="twitter:description" content="随着越来越多的人使用 React 开发web应用，如何高效全面的测试 React 组件成了一个问题。今天我们主要讲解如何使用 Jest、Enzyme 编写 React 组件单元测试。 安装 使用npm npm install --save-dev jest babel-jest enzyme react-test-renderer  使用yarn yarn add -D jest babel-je">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/15/how-to-test-react/"/>
 
 
 
 
 
-  <title>Devillo Blog</title>
+  <title>如何编写 React 组件测试 | Devillo Blog</title>
   
 
 
@@ -157,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/15/how-to-test-react/" itemprop="url">如何编写 React 组件测试</a></h1>
+          <h1 class="post-title" itemprop="name headline">如何编写 React 组件测试</h1>
         
 
         <div class="post-meta">
@@ -319,9 +319,7 @@
       
 
       
-        
-          
-            <p>随着越来越多的人使用 React 开发web应用，如何高效全面的测试 React 组件成了一个问题。今天我们主要讲解如何使用 <a href="http://facebook.github.io/jest/" target="_blank" rel="external">Jest</a>、<a href="http://airbnb.io/enzyme/" target="_blank" rel="external">Enzyme</a> 编写 React 组件单元测试。</p>
+        <p>随着越来越多的人使用 React 开发web应用，如何高效全面的测试 React 组件成了一个问题。今天我们主要讲解如何使用 <a href="http://facebook.github.io/jest/" target="_blank" rel="external">Jest</a>、<a href="http://airbnb.io/enzyme/" target="_blank" rel="external">Enzyme</a> 编写 React 组件单元测试。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
 <li><p>使用npm</p>
 <pre><code>npm install --save-dev jest babel-jest enzyme react-test-renderer
@@ -462,20 +460,27 @@ describe(&quot;&lt;Button /&gt;&quot;, () =&gt; {
 </li>
 </ol>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -483,21 +488,22 @@ describe(&quot;&lt;Button /&gt;&quot;, () =&gt; {
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -505,6 +511,10 @@ describe(&quot;&lt;Button /&gt;&quot;, () =&gt; {
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -524,8 +534,17 @@ describe(&quot;&lt;Button /&gt;&quot;, () =&gt; {
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -569,6 +588,22 @@ describe(&quot;&lt;Button /&gt;&quot;, () =&gt; {
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试步骤"><span class="nav-number">2.</span> <span class="nav-text">测试步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始测试"><span class="nav-number">3.2.</span> <span class="nav-text">开始测试</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -682,10 +717,10 @@ describe(&quot;&lt;Button /&gt;&quot;, () =&gt; {
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
